@@ -23,7 +23,7 @@ $.get("/api/headline", function (data) {
     }
 });
 $(document).ready(function () {
-    $(".deleter").on("click", function () {
+    $(document).on("click", ".deleter",function () {
         var title = $(this).siblings("a").text();
         $.ajax("/api/headline/" + title, {
             type: "DELETE"
@@ -37,7 +37,7 @@ $(document).ready(function () {
     $(".exit").on("click", function () {
         $("#noteHolder").empty()
     })
-    $(".noteAdd").on("click", function () {
+    $(document).on("click", ".noteAdd",function () {
         var title = $(this).siblings("a").text();
         $("#myModalLabel").text(title);
         $.get("/api/Note/" + title, function (data) {
