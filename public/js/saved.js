@@ -70,6 +70,7 @@ $(document).ready(function () {
                         </div>
                     `
         $("#noteHolder").append(html);
+        $("#noNotes").addClass("d-none");
         $.post("/api/Note", note);
     })
     $(document).on("click", ".noteDelete",function () {
