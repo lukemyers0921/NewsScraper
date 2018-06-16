@@ -81,5 +81,9 @@ $(document).ready(function () {
             type: "DELETE"
         })
         $(this).closest("div").remove();
+        var a = $("#noteHolder").children();
+        if(a.length < 1) {
+            $("#noNotes").removeClass("d-none");
+        }
     })
 });
