@@ -41,7 +41,6 @@ $(document).ready(function () {
         var title = $(this).siblings("a").text();
         $("#myModalLabel").text(title);
         $.get("/api/Note/" + title, function (data) {
-            console.log(data);
             if (data.length > 0) {
                 $("#noNotes").addClass("d-none");
                 for (i = 0; i < data.length; i++) {
@@ -71,7 +70,7 @@ $(document).ready(function () {
                         </div>
                     `
         $("#noteHolder").append(html);
-        
+        $("#noNotes").addClass("d-none");
         $.post("/api/Note", note);
     })
     $(document).on("click", ".noteDelete",function () {
