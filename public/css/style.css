@@ -1,0 +1,16 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+.jumbotron {
+    background-image: url("../img/nyt.jpg");
+    background-size: cover;
+    text-align: center;
+}
+.jumbotron h1 {
+    font-size: 6em;
+    font-weight: bold;
+}
+
+#noNotes {
+    margin: 0 auto;
+}
